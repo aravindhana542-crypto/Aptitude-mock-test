@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aptitude Mock Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Screen 1: Home -->
+  <div id="home-screen" class="screen active">
+    <h1>Aptitude Mock Test</h1>
+    <p>10 Questions · 15 seconds each · +4 correct / -1 wrong</p>
+    <button onclick="startTest()">Start Test</button>
+  </div>
+
+  <!-- Screen 2: Quiz -->
+  <div id="quiz-screen" class="screen">
+    <div id="timer-bar"><div id="timer-fill"></div></div>
+    <p id="q-number">Question 1 of 10</p>
+    <p id="q-topic">Topic</p>
+    <h2 id="q-text">Question text</h2>
+    <div id="options-container"></div>
+    <p id="explanation" style="display:none;"></p>
+    <button id="next-btn" onclick="nextQuestion()" style="display:none;">Next</button>
+  </div>
+
+  <!-- Screen 3: Result -->
+  <div id="result-screen" class="screen">
+    <h1 id="score-display"></h1>
+    <p id="score-label"></p>
+    <div id="stats"></div>
+    <button onclick="showReview()">Review Answers</button>
+    <button onclick="startTest()">Try Again</button>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>
